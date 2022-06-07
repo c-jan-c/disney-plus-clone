@@ -1,0 +1,79 @@
+.imgSlider{
+    margin-top: 1rem;
+    
+}
+
+
+.imgSlider__slider > button{
+    opacity: 0;
+    height: 100%;
+    width: 5vw;
+    z-index: 1;
+}
+
+.imgSlider__slider>button:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+
+.imgSlider__slider ul li button::before{
+    font-size: 0.7rem;
+    color: rgb(150, 158, 171);
+}
+
+.imgSlider__slider ul li.slick-active button::before{
+    color:white;
+}
+
+.imgSlider__wrap{
+    border-radius: 0.45rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.imgSlider__wrap:hover{
+    transform: scale(1.01);
+}
+
+.imgSlider__wrap a{
+    border-radius: 1rem;
+    /*box-shadow: 0 0 0.7rem #f6f6f6;*/
+    box-shadow: rgb(0 0 0/69%) 0px 26px 30px -10px,
+        rgb(0 0 0/70%) 0px 16px 10px -10px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    padding: 0.1rem;
+    margin: 0 2rem;
+}
+
+.imgSlider__wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.imgSlider__wrap a:hover{
+    padding: 0;
+    border: 2px solid #f6f6f6;
+    transition: 50ms ease-in-out;
+}
+
+.slick-list {
+    overflow: initial;
+}
+
+.slick-prev {
+    left: 0.1vw;
+}
+
+.slick-next{
+    right: 0.1vw;
+}
+
+
+
+
+

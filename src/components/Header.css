@@ -1,0 +1,149 @@
+
+.header{
+    position: sticky;
+    padding: 0.2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #090b13;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 0.5rem 0.6rem #090b13;
+}
+
+
+.header__logo{
+    margin: 10px 0;
+    max-width: 100px;
+    margin-left: 0.4rem;
+    min-height: 1px;
+    height: 100%;
+}
+
+.header__menuObject{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-flow: row nowrap;
+    margin-left: 1.5rem;
+    margin-right: 0.4rem;
+
+}
+
+.header__menuObjectIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 35px;
+    width: 100%;
+}
+
+.header__menuObject:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.15s;
+}
+
+.header__menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-flow: row nowrap;
+    padding: 0;
+    position: relative;
+    margin-right: auto;
+    margin-left: 0.5rem;
+    color: #f6f6f6;
+    letter-spacing: 0.2rem;
+    font-size: 0.95rem;
+    font-weight: 550;
+}
+
+.header__signIn:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    background-color: #111525;
+    box-shadow: 0 0 0.4rem #f6f6f6;
+}
+
+.header__signIn{
+    padding: 01rem 1.2rem;
+    background-color: #090b13;
+    color: #f6f6f6;
+    border: 1.5px solid #f6f6f6;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.45rem;
+    font-size: 1rem;
+    font-weight: 550;
+    letter-spacing: 0.04rem;
+    transition: all 0.1s ease-in-out;
+}
+
+.header__signOut{
+    align-items: center;
+    justify-content: center;
+}
+
+.header__signOut:hover .header__signOutDropdown{
+    opacity: 1;
+    visibility: visible;
+}
+
+.header__photo{
+    height: 100%;
+    max-width: 2.4rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.header__photo:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 0.2rem #f6f6f6;
+}
+
+.header__signOutDropdown{
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    font-size: 1.4rem;
+    font-weight: 540;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    background-color: #090b13;
+    color: #f6f6f6;
+    border: 1px solid rgba(151, 151, 151, 0.35);
+    border-radius: 0.45rem;
+    padding: 1rem 1.4rem;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    visibility: hidden;
+}
+
+.header__signOutDropdown:hover{
+    background-color: #111525;
+    box-shadow: 0 0 0.4rem #f6f6f6;
+    transform: scale(1.1);
+    border: 1px solid rgba(151, 151, 151, 0.7);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header__menuObject {
+        display: none;
+    }
+
+    #home{
+        display: contents;
+    }
+}
+

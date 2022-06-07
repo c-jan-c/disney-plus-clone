@@ -1,0 +1,25 @@
+
+
+
+.home{
+    position: relative;
+    min-height: calc(100vh - 250px);
+    overflow-x: hidden;
+    display: block;
+    top: 72px;
+    padding: calc(3.5vw + 5px);
+}
+
+.home__background {
+    background-image: url(../../public/images/home-background.png);
+    position: top;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    inset: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 1;
+}
