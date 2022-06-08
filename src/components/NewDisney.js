@@ -6,7 +6,6 @@ import { selectNewDisney } from "../features/movie/movieSlice";
 
 function NewDisney(){
     const movies = useSelector(selectNewDisney);
-    console.log(movies)
     return(
         <div className="movieCard">
             <h4>New to DisneyClone+</h4>

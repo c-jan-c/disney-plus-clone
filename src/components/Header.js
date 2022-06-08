@@ -12,15 +12,6 @@ function Header(){
     const username = useSelector(selectUserName);
     const userPhoto = useSelector(selectUserPhoto);
 
-    useEffect(() => {
-        auth.onAuthStateChanged(async (user) => {
-            if(user){
-                setUser(user)
-                navigate('/home', {replace: true})
-            }
-        })
-    }, [username])
-
     const setUser = (user) => {
         dispatch(setUserLoginDetails({
             name: user.displayName,
@@ -28,6 +19,21 @@ function Header(){
             photo: user.photoURL,
         }))
     }
+
+    const handleStateChange = () => {
+        auth.onAuthStateChanged(async (user) => {
+            if(user){
+                setUser(user)
+                navigate('/home', {replace: true})
+            }
+        })
+    }
+
+
+    useEffect(() => {
+        handleStateChange();
+    }, [username])
+
 
 
     const handleAuth = () => {
@@ -47,6 +53,10 @@ function Header(){
                 alert(err.message)
             })
         }
+    }
+
+    const loginPage = () =>{
+        navigate('/login', {redirect: true})
     }
 
     const scrollToElement = (element) => {
@@ -80,11 +90,18 @@ function Header(){
                         </div>
                     </div>
                 </>
-                    :
-                <button onClick={handleAuth} className="header__signIn">LOG IN</button>
+                    :     
+                <div className="header__signIn">
+                    <span className="header__signInButton">LOG IN</span>
+                    <div className="header__signInDropdown">
+                        <span onClick={loginPage}>Sign In with E-mail</span>
+                        <span onClick={handleAuth}>Sign In with Google</span>
+                    </div>
+                </div>                 
             }            
         </div>
     )
 }
+
 
 export default Header;

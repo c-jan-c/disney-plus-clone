@@ -5,6 +5,7 @@ import Details from './components/Details';
 import Header from './components/Header';
 import Home from './components/Home';
 import Login from './components/Login';
+import SignIn from './components/SignIn';
 
 function App() {
   return (
@@ -12,6 +13,11 @@ function App() {
       <Router>
         <Header/>
         <Routes>
+          <Route path='/login' element={
+            <>
+              <SignIn />
+            </>
+          }/>
           <Route path='/home' element={
             <>
               <Home/>

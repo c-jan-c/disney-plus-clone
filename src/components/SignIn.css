@@ -1,0 +1,110 @@
+.signIn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.signIn__border{
+    border: 2px solid rgba(151, 151, 151, 0.35);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem 0.2rem rgba(0, 0, 0, 0.8);
+    padding: .5rem 1rem;
+}
+
+.signIn__border h1{
+    display: flex;
+    justify-content: center;
+    letter-spacing: .15rem;
+}
+
+.signIn__border h4{
+    font-size: 1.1rem;
+    letter-spacing: .15rem;
+}
+
+
+
+.signIn__logo{
+    width: 100%;
+    max-width: 20rem;
+    min-width: 10rem;
+    opacity: 1;
+    z-index: 1;
+}
+
+.signIn__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signIn__formInput{
+    background-color: rgba(151, 151, 151, 0.35);
+    color: #f6f6f6;
+    width: 100%;
+    height: 2.5rem;
+    font-size: .9rem;
+    border-radius: .4rem;
+    border: 2px solid rgba(151, 151, 151, .2);
+}
+
+.signIn__formInput:focus{
+    border: 2px solid rgba(249, 249, 249, .6);
+    outline: none;
+    
+}
+
+.signIn__formButton{
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: .5rem 2rem;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    font-weight: 500;
+    border-radius: .5rem;
+    background-color: rgba(151, 151, 151, 0.35);
+    border: 2px solid rgba(151, 151, 151, 0.35);
+    box-shadow: 0 .3rem 1rem 0.1rem rgba(0, 0, 0, 0.8);
+    color: #f6f6f6;
+    transition: all 0.1s ease-in-out;
+}
+
+
+.signIn__formButton:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    background-color: rgba(151, 151, 151, 0.6);
+    border: 2px solid rgba(151, 151, 151, 0.6);
+}
+
+.register{
+    font-size: 1.2rem;
+    padding: .3rem 1.6rem;
+    margin-top: 0;
+}
+
+.signIn p{
+    font-size: .9rem;
+    letter-spacing: .15rem;
+    font-weight: 550;
+}
+
+
+.signIn__background{
+    background-image: url(../../public/images/home-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;  
+    inset: 0;
+    opacity: 1;
+}
